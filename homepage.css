@@ -16,13 +16,17 @@
     height: 64px;
     width: 100%;
     box-shadow: 0 0 10px gray;
-    background-color: #83cf31;
-    position: fixed;
+    background-color: #679e2b;
+    position: absolute;
     top: 0;
 }
 
 .header-left {
     float: left;
+}
+
+.header-logo {
+
 }
 
 .header-right {
@@ -46,13 +50,26 @@
     clear: both;
 }
 
-.main-vis {
-    padding-top: 340px;
-    padding-bottom: 380px;
-    background-image: url("images/west-2795177_1280.jpg");
+.main-Vis {
+    padding-top: 320px;
+    padding-bottom: 360px;
+    background-image: linear-gradient(rgba(0,0,0,0.52),rgba(0,0,0,0.90)),url("images/compass-8324516_1280.jpg");
     background-size: cover;
-    color: rgba(123, 202, 226, 0.986);
+    color: rgba(142, 214, 236, 0.986);
     text-align: center;
+}
+
+.main-Line {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(19, 20, 20);
+    color: rgba(43, 196, 145, 0.952);
+}
+
+.functions {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .subtitle {
@@ -66,9 +83,63 @@
     margin-bottom: 10px;
 }
 
+.main-Divided {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dividedImages {
+    position: relative;
+}
+
+.dividedImages::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* 暗さ調整 */
+    z-index: 1;
+}
+
+.dividedImages img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dividedImages .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dividedImages .text-sub {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dividedImages:hover img {
+    filter: grayscale(60%) brightness(80%);
+    transition: filter 0.4s ease;
+}
+
 .footer {
     height: 180px;
-    background: rgba(172, 71, 46, 0.795);
+    background: rgba(145, 59, 38, 0.795);
     color: #e8e8e8;
     padding-top: 20px;
 }
